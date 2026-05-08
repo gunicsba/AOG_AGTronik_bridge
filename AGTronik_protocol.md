@@ -1,6 +1,6 @@
 # AOG-AgTronik Bridge -- AvMap AgTronic Section Control
 
-Bridge application connecting **AgOpenGPS** to the **AgTronic** sprayer controller via the PAVPAGT NMEA-like serial protocol based on reverse engineering the AvMap serial section control.
+Bridge application connecting **AgOpenGPS** to the Agromehanika **AG-Tronik** M1/S1 sprayer controller via the PAVPAGT NMEA-like serial protocol based on reverse engineering the AvMap serial section control.
 
 ---
 

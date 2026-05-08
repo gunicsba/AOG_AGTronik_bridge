@@ -1,3 +1,5 @@
+[![Build AOG-TUVR](https://github.com/gunicsba/AOG_AGTronik_bridge/actions/workflows/build.yml/badge.svg)](https://github.com/gunicsba/AOG_AGTronik_bridge/actions/workflows/build.yml)
+
 # AOG-AgTronik Bridge
 
 Bridge between **AgOpenGPS** and the **AvMap AgTronic** sprayer controller via the PAVPAGT serial protocol.
