@@ -30,15 +30,15 @@ Press **X** to exit.
 
 | Feature | Description |
 |---------|-------------|
-| Bidirectional section control | Sends section ON/OFF commands to AvMap; reports machine state back to AgOpenGPS |
-| Auto mode | AgOpenGPS controls sections; disabled sections on AvMap are forced off |
-| Manual mode | AvMap controls sections locally; state is reported back to AgOpenGPS |
+| Bidirectional section control | Sends section ON/OFF commands to AgTronik; reports machine state back to AgOpenGPS |
+| Auto mode | AgOpenGPS controls sections; disabled sections on AgTronik are forced off |
+| Manual mode | AgTronik controls sections locally; state is reported back to AgOpenGPS |
 | Master switch | ON/OFF state reported to AgOpenGPS; controls all sections |
-| Speed forwarding | GPS speed from AgOpenGPS sent to AvMap display |
-| Section widths | Automatically read from machine and saved to config |
+| Speed forwarding | GPS speed from AgOpenGPS sent to AgTronik display |
+| Section widths | Automatically read from machine and saved to config (AgOpenGPS doesn't support remote width) |
 | Configurable section count | Supports 5, 7, or 9 section machine variants |
-| Configurable rates | SCT and SPD command frequencies adjustable in config |
-| Immediate section change | Section commands sent instantly on change (no wait for next cycle) |
+| Configurable rates | SCT and SPD command frequencies adjustable in config|
+| Immediate section change | Section (SCT) commands sent instantly on change (no wait for next cycle) |
 | Comms-lost safety | Sections zeroed when AgIO connection is lost |
 | Auto-reconnect | 4-state machine handles connection loss and recovery |
 
@@ -66,21 +66,21 @@ Press **X** to exit.
 
 ### Commands (Bridge -> AvMap)
 
-| Command | Example | Rate | Description |
-|---------|---------|------|-------------|
-| WDT | `$PAVPAGT,WDT*2E` | 1 Hz | Connection probe (handshake only) |
-| VER | `$PAVPAGT,VER*25` | once | Version query |
-| SCT | `$PAVPAGT,SCT,1,1,0,0,0,1,1*XX` | configurable | Section states (0=off, 1=on) |
-| SPD | `$PAVPAGT,SPD,125*XX` | configurable | Speed (km/h * 10) |
+| Command | Purpose | Example | Rate | Description |
+|---------|---------|---------|------|-------------|
+| WDT | WiDTh | `$PAVPAGT,WDT*2E` | 1 Hz | Connection probe (handshake only) |
+| VER | VERsion |`$PAVPAGT,VER*25` | once | Version query |
+| SCT | SeCTion | `$PAVPAGT,SCT,1,1,0,0,0,1,1*XX` | configurable | Section states (0=off, 1=on) |
+| SPD | SPeeD |`$PAVPAGT,SPD,125*XX` | configurable | Speed (km/h * 10) |
 
 ### Responses (AvMap -> Bridge)
 
-| Response | Example | Description |
-|----------|---------|-------------|
-| SWT | `$PAVPAGT,SWT,A,1,0,0,0,0,0,1,1*55` | Mode + master + section states |
-| VER | `$PAVPAGT,VER,1.23*XX` | Firmware version |
-| ACK | `$PAVPAGT,ACK,SCT*XX` | Command acknowledgement |
-| WDT | `$PAVPAGT,WDT,0250,0250,...*XX` | Section widths in cm |
+| Response | Purpose | Example | Description |
+|----------|---------|---------|-------------|
+| SWT | SWiTch | `$PAVPAGT,SWT,A,1,0,0,0,0,0,1,1*55` | Mode + master + section states |
+| VER | VERsion | `$PAVPAGT,VER,1.23*XX` | Firmware version |
+| ACK | ACKnowledge | `$PAVPAGT,ACK,SCT*XX` | Command acknowledgement |
+| WDT | WiDTh |`$PAVPAGT,WDT,0250,0250,...*XX` | Section widths in cm |
 
 ### SWT Fields
 
