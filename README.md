@@ -33,6 +33,8 @@ Press **X** to exit.
 
 Make your own cable as pin4 has 12V on Hardi and your USB-RS232 adapter might not like it!
 
+![AGTRONIK_COM.jpg](AGTRONIK_COM.jpg "COM port on AgTronik")
+
 ## Features
 
 | Feature | Description |
