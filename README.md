@@ -14,6 +14,8 @@ Grab the latest `AOG-AgTronik.exe` from [Releases](../../releases).
 
 - Serial connection to the AvMap AgTronic (USB-to-Serial adapter)
 - AgOpenGPS / AgIO broadcasting on UDP port 8888
+- [RS-232 adapter](https://www.aliexpress.com/item/1005009141854353.html)
+- AgOpenGPS / AgIO broadcasting on UDP port 8888
 
 For development:
 - Python 3.8+
@@ -25,6 +27,11 @@ Run `AOG-AgTronik.exe`. On first run you will be prompted to select a COM port.
 The choice is saved to `config.ini` so subsequent runs connect automatically.
 
 Press **X** to exit.
+
+## Connection
+![nullmodemkabel.jpg](nullmodemkabel.jpg "Null Modem cable")
+
+Make your own cable as pin4 has 12V on Hardi and your USB-RS232 adapter might not like it!
 
 ## Features
 
