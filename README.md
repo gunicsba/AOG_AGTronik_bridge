@@ -35,6 +35,10 @@ Make your own cable as pin4 has 12V on Hardi and your USB-RS232 adapter might no
 
 ![AGTRONIK_COM.jpg](AGTRONIK_COM.jpg "COM port on AgTronik")
 
+![IMG_20260512_233046_000.jpg](IMG_20260512_233046_000.jpg)
+
+![IMG_20260512_233048_617.jpg](IMG_20260512_233048_617.jpg)
+
 ## Features
 
 | Feature | Description |
